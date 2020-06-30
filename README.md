@@ -44,7 +44,7 @@ cd <project_dir>
 npm run build
 http-server dist
 ```
-The open the provided url in the browser.
+Then open the provided url in the browser.
 
 ## Contact
 
