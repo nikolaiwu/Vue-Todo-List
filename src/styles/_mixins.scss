@@ -1,0 +1,21 @@
+@mixin neumorphism {
+    background-color: $body-bg;
+    border-radius: $border-radius-lg;
+    box-shadow: 12px 12px 12px $gray-300,
+                -12px -12px 12px white;
+}
+
+@mixin neumorphism-inverse {
+    background-color: $body-bg;
+    border-radius: $border-radius-lg;
+    box-shadow: 6px 6px 6px $gray-300 inset,
+                -6px -6px 6px white inset;
+}
+
+@mixin list-item {
+    @extend .rounded-pill;
+    display: block;
+    padding: 1rem 1.5rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+}

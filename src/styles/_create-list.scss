@@ -1,0 +1,30 @@
+.create-list-nav > a {
+    @include list-item();
+    transition: all 100ms;
+
+    > svg {
+        transition: all 200ms;
+    }
+
+    &:not(.router-link-active):hover {
+        text-decoration: none;
+        background-color: $cyan;
+        color: white;
+    }
+
+    &.router-link-active {
+        @include neumorphism();
+        background-color: $cyan;
+        color: white;
+
+        > svg {
+            margin-left: 6px;
+            margin-right: 6px;
+        }
+    }
+}
+
+.create-list {
+    @include neumorphism();
+    padding: 1.25em;
+}

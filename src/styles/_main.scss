@@ -1,0 +1,43 @@
+body {
+    color: #2c3e50;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    margin: 1rem auto 0;
+}
+
+h1 {
+    margin-bottom: 0;
+    font-size: 4rem;
+    letter-spacing: -.25rem;
+    text-shadow:2px 2px 2px $gray-300,
+                -2px -2px 2px white;
+
+    a,
+    a:hover,
+    svg {
+        color: $cyan;
+        color: $gray-600;
+    }
+
+    svg {
+        color: $gray-300;
+    }
+}
+
+strong {
+    font-weight: 900;
+}
+
+section {
+    margin: 2rem 0;
+
+    > h2 {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        margin-bottom: 0;
+        color: $gray-600;
+        text-shadow:2px 2px 2px $gray-300,
+                    -2px -2px 2px white;
+    }
+}

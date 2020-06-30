@@ -1,0 +1,43 @@
+.task-heading {
+    @extend .rounded-pill;
+    @include neumorphism();
+    padding: 1.25em;
+
+    &--title {
+        font-size: 1.5rem;
+
+        .input-group {
+            width: auto;
+        }
+
+        .form-control {
+            font-size: inherit;
+            line-height: inherit;
+            border: 0;
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+    }
+}
+
+.task-list {
+    @include neumorphism-inverse();
+    margin: -2rem 2.5rem 2rem;
+    padding: 1.25em;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+
+    .input-group {
+        padding: .75rem 0;
+        border-bottom: 2px solid white;
+        border-top: 1px solid $gray-300;
+
+        &:first-of-type {
+            border-top: 0;
+        }
+
+        &:last-of-type {
+            border-bottom: 0;
+        }
+    }
+}

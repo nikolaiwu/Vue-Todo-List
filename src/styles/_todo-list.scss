@@ -1,0 +1,33 @@
+.todo-list {
+    @extend section;
+
+    .no-records {
+        @include list-item();
+        @include neumorphism-inverse();
+        color: $gray-500;
+    }
+
+    a {
+        @include list-item();
+        transition: all 200ms;
+
+        > svg {
+            color: $gray-300;
+            transition: all 100ms;
+        }
+
+        &:hover {
+            text-decoration: none;
+        }
+
+        &.router-link-exact-active {
+            color: $link-hover-color;
+            @include neumorphism();
+
+            > svg {
+                margin-left: 6px;
+                margin-right: 6px;
+            }
+        }
+    }
+}
