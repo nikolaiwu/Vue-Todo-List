@@ -17,14 +17,10 @@ export const updateLocalStorage = (list: ListItemModel[]) => {
 
 export default new Vuex.Store({
   state: {
-    loading: false,
     list: []
   },
 
   mutations: {
-    LOADING: (state, payload) => {
-      state.loading = payload
-    },
 
     LIST_UPDATE: (state, payload) => {
       state.list = payload
@@ -84,12 +80,7 @@ export default new Vuex.Store({
 
   actions: {
     fetchTodoList(context) {
-      context.commit('LOADING', true)
-      // Simulate server request delay by 300ms
-      setTimeout(() => {
-        context.commit('LOADING', false)
         context.commit('LIST_UPDATE', JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]'))
-      }, 3000)
     },
 
     listCreate(context, payload) {
